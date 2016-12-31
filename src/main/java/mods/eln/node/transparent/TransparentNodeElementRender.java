@@ -275,7 +275,7 @@ public abstract class TransparentNodeElementRender {
 	public void destructor()
 	{
 		if(usedUuid())
-			ClientProxy.uuidManager.kill(uuid);
+			ClientProxy.Companion.getUuidManager().kill(uuid);
 	}
 	public void refresh(float deltaT) {
 		

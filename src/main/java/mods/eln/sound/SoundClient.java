@@ -12,7 +12,7 @@ public class SoundClient {
 	}*/
 	
 	public static void play(SoundCommand p) {
-		ClientProxy.soundClientEventListener.currentUuid = p.uuid; //trolilole 
+		ClientProxy.Companion.getSoundClientEventListener().currentUuid = p.uuid; //trolilole
 
 		EntityPlayer player = Minecraft.getMinecraft().thePlayer;
 		if (p.world.provider.dimensionId != player.dimension) return;
@@ -47,6 +47,6 @@ public class SoundClient {
 			Utils.println("");
 		}
 		
-		ClientProxy.soundClientEventListener.currentUuid = null;
+		ClientProxy.Companion.getSoundClientEventListener().currentUuid = null;
 	}
 }

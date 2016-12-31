@@ -108,7 +108,7 @@ public class PacketHandler {
 
     private void packetDestroyUuid(DataInputStream stream, NetworkManager manager, EntityPlayer player) {
         try {
-            ClientProxy.uuidManager.kill(stream.readInt());
+            ClientProxy.Companion.getUuidManager().kill(stream.readInt());
         } catch (IOException e) {
             e.printStackTrace();
         }

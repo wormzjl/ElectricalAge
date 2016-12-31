@@ -210,7 +210,7 @@ public abstract class SixNodeElementRender {
 	public void destructor()
 	{
 		if (usedUuid())
-			ClientProxy.uuidManager.kill(uuid);
+			ClientProxy.Companion.getUuidManager().kill(uuid);
 
 		if (glListEnable())
 		{
